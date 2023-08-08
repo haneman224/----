@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <script>
       function check() {
-        let a = document.getElementById("i0").value;
+        let a = document.getElementById("i0").value; 
         let b = document.getElementById("i1").value;
-        document.getElementById("r0").textContent = a == b;
-        document.getElementById("r1").textContent = a != b;
-        document.getElementById("r2").textContent = a < b;
-        document.getElementById("r3").textContent = a > b;
-        document.getElementById("r4").textContent = a <= b;
-        document.getElementById("r5").textContent = a >= b;
+        document.getElementById("r0").textContent = a == b;//値が同じ
+        document.getElementById("r1").textContent = a != b;//値が違う
+        document.getElementById("r2").textContent = a < b;//bのほうが大きい時。
+        document.getElementById("r3").textContent = a > b;//aのほうが大きいとき
+        document.getElementById("r4").textContent = a <= b;//aはb以下
+        document.getElementById("r5").textContent = a >= b;//aはb以上
       }
+      //比較と条件式　true成立　false 不成立
     </script>
   </head>
-  <body>
+  <body><!--ここからHTML -->
     a:<input id="i0" value="4"> 
     b:<input id="i1" value="2">
     <button onclick="check()">check</button>
     <ul>
       <li>a == b : <span id="r0"></span></li> <!--aとbの値が同じ？ -->
-      <li>a != b : <span id="r1"></span></li> <!-- -->
-      <li>a < b : <span id="r2"></span></li> <!-- -->
-      <li>a > b : <span id="r3"></span></li> <!-- -->
-      <li>a <= b : <span id="r4"></span></li> <!-- -->
-      <li>a >= b : <span id="r5"></span></li> <!-- -->
+      <li>a != b : <span id="r1"></span></li> <!--値が違う -->
+      <li>a < b : <span id="r2"></span></li> <!--bのほうが大きいとき -->
+      <li>a > b : <span id="r3"></span></li> <!--aのほうが大きいとき -->
+      <li>a <= b : <span id="r4"></span></li> <!--aはb以下 -->
+      <li>a >= b : <span id="r5"></span></li> <!--aはb以上 -->
     </ul>
   </body>
 </html>
