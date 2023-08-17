@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      function calcSum() {
+        let max = document.getElementById("max").value;
+
+        //ここから
+        let total = 0;
+        for (let i = 1; i <= max; i++) { //繰り返し文で指定した数字の回数まで、全部足す？
+          total += i;
+        }
+        //ここまで。
+        document.getElementById("val").textContent = max;
+        document.getElementById("sum").textContent = total;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>1から<span id="val"></span>の合計は<span id="sum"></span></h2>
+    <input id="max" value="10">
+    <button onclick="calcSum()">合計</button>
+  </body>
+</html>

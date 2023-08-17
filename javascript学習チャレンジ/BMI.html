@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+<script>
+function calcBMI(){
+if (a == b){
+    let a =document.getElementById("").value;
+    let b =document.getElementById("").value;
+//わからなかった
+    let bmi = w / (h * h);
+        if (bmi < 18.5) {
+          document.getElementById("result").textContent = "やせ気味";
+        } else if (bmi >= 25) {
+          document.getElementById("result").textContent = "太り気味";
+        } else {
+          document.getElementById("result").textContent = "標準";
+        }
+//わからなかった↑
+
+}
+}
+</script>
+</head>
+<body>
+    <h2>BMI計算機</h2>
+    身長(m):<>
+    体重(kg):<>
+    <button onclick="calcBMI()">check </button>
+    <p id="result"></p>
+</body>
+</html>
