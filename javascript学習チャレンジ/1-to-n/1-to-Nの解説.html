@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      // calcSum関数：1から指定された数までの合計を計算して表示する
+      function calcSum() {
+        // HTML内のidが"max"の要素（入力フィールド）から値を取得
+        //入力テキスト欄から入れらた数字を持ってくる。
+        let max = document.getElementById("max").value;
+
+        // 合計値を保持する変数を初期化
+        let total = 0;
+
+        // 1からmaxまでの数を合計するループ
+        for (let i = 1; i <= max; i++) { //letは変数の箱であり、<= max;（入れられた数字）に足す
+          total += i; // 合計にiを加える　max;（入れられた数字になったら終了）
+        }
+
+        // 合計と最大値を表示するためのspan要素に値を設定
+        document.getElementById("val").textContent = max;
+        // ↑ ↑ ↑
+        // idが"val"の<span>要素のtextContentプロパティを変数maxの値で更新しています。
+        // これにより、<span>要素内に最大値が表示されます。
+
+        document.getElementById("sum").textContent = total; // 合計を表示
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ユーザーに最大値を入力させるための入力フィールド -->
+    <input id="max">
+    <!-- ↑ ↑ ↑
+    // id属性が"max"の<input>要素は、最大値を入力するためのフィールドです。 -->
+
+    <!-- 合計を計算して表示するためのボタン（クリック時にcalcSum関数を呼ぶ） -->
+    <button onclick="calcSum()">合計</button>
+    <!-- ↑ ↑ ↑
+    // ボタンをクリックするとcalcSum関数が呼ばれ、合計が計算されます。 -->
+
+    <!-- 最大値と合計値を表示するためのテキスト -->
+    <h2>1から<span id="val"></span>の合計は<span id="sum"></span></h2>
+    <!-- ↑ ↑ ↑
+    // id属性が"val"の<span>要素には、最大値が表示されます。
+    // id属性が"sum"の<span>要素には、合計値が表示されます。 -->
+  </body>
+</html>

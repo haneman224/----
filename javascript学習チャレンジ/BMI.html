@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
 <script>
 function calcBMI(){
-if (a == b){
-    let a =document.getElementById("").value;
-    let b =document.getElementById("").value;
-//わからなかった
-    let bmi = w / (h * h);
-        if (bmi < 18.5) {
-          document.getElementById("result").textContent = "やせ気味";
-        } else if (bmi >= 25) {
-          document.getElementById("result").textContent = "太り気味";
-        } else {
-          document.getElementById("result").textContent = "標準";
-        }
-//わからなかった↑
 
-}
+    let h =document.getElementById("m").value; // 身長の変数定義
+    let w =document.getElementById("kg").value; //　体重の変数定義
+    let bmi = w / (h * h);//BMIの計算式
+        if (bmi < 18.5) {
+          document.getElementById("result").textContent = "やせ気味";//　18.5以下
+        } else if (bmi >= 25) {
+          document.getElementById("result").textContent = "太り気味";//　25 以上
+        } else {
+          document.getElementById("result").textContent = "標準"; //　どちらでもないとき。。
+        }
 }
 </script>
 </head>
 <body>
     <h2>BMI計算機</h2>
-    身長(m):<>
-    体重(kg):<>
+    身長(m):<input id="m"></input> テキストボックス
+    体重(kg):<input id="kg"></input>テキストボックス
     <button onclick="calcBMI()">check </button>
     <p id="result"></p>
 </body>

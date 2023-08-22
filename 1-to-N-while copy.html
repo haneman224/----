@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <script>
-      function calcSum() { //変数　大きいな入れ物？みたいなもの。
+      function calcSum() {
         let max = document.getElementById("max").value;
-
-        //ここから
         let total = 0;
-        for (let i = 1; i <= max; i++) { //繰り返し文で指定した数字の回数まで、全部足す？
+        let i = 1;
+        while (i <= max) {
           total += i;
+          i++;
         }
-        //ここまで。
+        // ここにコードを記述
         document.getElementById("val").textContent = max;
         document.getElementById("sum").textContent = total;
       }
@@ -19,7 +19,7 @@
   </head>
   <body>
     <h2>1から<span id="val"></span>の合計は<span id="sum"></span></h2>
-    <input id="max" value="10">
+    <input id="max" value="10" />
     <button onclick="calcSum()">合計</button>
   </body>
 </html>
