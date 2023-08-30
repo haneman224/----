@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件分離</title>
+</head>
+<body>
+    <!--
+演習問題
+Aさんの体重が60kg 身長が1.7mです
+1復習;AさんのBMIを求めて出力
+BMI＝体重kg/ (身長m*身長m)
+2BMIの数値により、痩せ　普通　肥満を出力
+25以上で肥満
+18.5以上25未満が普通
+18.5未満が痩せ。
+    -->
+<script>
+    let weight = 60;
+    let height = 1.7;
+
+let bmi = weight/(height*height);
+console.log(bmi)
+
+if(bmi >= 25){
+console.log("肥満")
+}
+else if(bmi > 18.5){
+console.log("普通")
+}
+else
+{
+console.log("痩せ")
+}
+//凡ミス、文字列を""してなかったせいで出力されなかった。
+//まじで納得いかないのは最後のelseのところで条件式ほんとうはいらない所。
+//読解力と理解力の問題。
+</Script>
+</body>
+</html>
