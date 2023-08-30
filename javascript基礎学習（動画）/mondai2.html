@@ -2,12 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>else if</title>
 </head>
 <body>
-  <script>
-    "use strict"
+<script>
 //例題
 //テスト点数ｘによって
 //通知表の成績をコンソールに出力
@@ -17,19 +15,19 @@
 //60点以上 c
 //60点未満 d
 
-let test1 = 90;
-let test2 = 80;
-let test3 = 60;
-let test4 = 60;
+let test = 80;
 
-if ( test1>= 90){
+
+if ( test>= 90)
+{
 console.log("A");
 }
-else if(test2> 80){
+else if(test>= 80)
+{
 console.log("B");
 }
 
-else if(test3> 60)
+else if(test>= 60)
 {
 console.log("C");
 }
@@ -39,6 +37,8 @@ console.log("D");
 } // なぜelseだけ{}と()がくっつとエラーになる？ 条件式はいらない。
 //出力されるのは一つだけ、変数が複数あってもわけわからなくなる上に全部表記させたいなら、それぞれ用意する。
 //elseは～～されるなら、これって一つの出力しか出してない。
-  </script>
+// >=と>の違い、　＝がついてれば大きいかもしくは同じか。ついてなかったら大きいか
+//　テキストボックスを使って、ユーザーが入力した数値を判定させたいね。
+ </script>
 </body>
 </html>
