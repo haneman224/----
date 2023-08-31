@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>論理演算子</title>
+    <script>
+        // && 論理AND　AとBがあったときに、両方ともとtrueの時に結果がとりゅーになるそれ以外はfalse
+        console.log(true && true); // true
+        console.log(true && false);// false
+        console.log(false && true);// false
+        console.log(false && false);// false
+        
+        // || 論理OR　AとBどっちかtrueなら出力がtrusになる。
+        console.log(true || true);//true
+        console.log(true || false);//false
+        console.log(false || true);//false
+        console.log(false || false);//false
+
+        // ! 論理NOT 論理値を反転させる
+        console.log(!true);//false
+        console.log(!false);//truse
+
+        // ! && ||　優先順位　優先させたいなら（）を付ける
+        console.log(false && true || true);//true
+        console.log(false && (true || true));//false
+        
+        // 運転免許証を持っていて
+        //かつ、いわいるゴールド免許証の場合は
+        //あたなは優良ドライバーですと表記
+
+
+        let hasDriversLicense = true;
+        let hasGoldLicense = true ;
+        let hasGoldLicense2 = false ;
+        
+        //正しい回答
+        if(hasDriversLicense && hasGoldLicense){ 
+        console.log("あなたは優良ドライバーです")
+        }
+
+        //if(hasDriversLicense){ ミスった回答
+        //    console.log()
+        //}
+        // なぜ間違えたか、問題を理解できてなかった。　もし優良ドライバーじゃなかった場合
+        //新しく宣言する？でも、五年以上でゴールド免許だから、それも条件付けしたいよね。
+        //なぜ｜｜でドライバーじゃありませんとでたかわからなくなった。
+
+        if(hasDriversLicense || hasGoldLicense2){ 
+        console.log("あなたは優良ドライバーではありません")
+        }
+
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
