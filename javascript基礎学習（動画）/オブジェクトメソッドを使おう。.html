@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <Script>
+// userの三つの要素（name、sex、ago）を得て、その中から年齢を計算する関数、コード。
+//　まずは変数を定義して、今年の西暦－userの年齢の条件式　出力。
+let user = {
+    name:'Taro Yamada',
+    gender:'man',
+    birthYear:1990, //変数
+    calcAge: function(thisYear) {
+        return thisYear - this.birthYear;
+    }
+}
+console.log(user.calcAge(2021));
+//特に問題はなかったがLive reload enabledが有効になっていた。
+    </Script>
+    
+</body>
+</html>
