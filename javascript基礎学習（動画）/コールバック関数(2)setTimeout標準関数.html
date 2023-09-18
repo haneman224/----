@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+//入力が終わったらコンソールに表示させる。
+//「hello! -san! 」
+//user関数関数（コールバック関数）
+
+function greeting(neme) {
+console.log('Hello!'+neme+'-san.');
+}
+function inputUserName(callback){
+    let neme = prompt('あたなのお名前を入力してください！');
+    callback(neme);
+}
+inputUserName(greeting)
+
+//インプットユーザーnameの呼び出し
+//引数には、コールバック関数のgreetingを指定。
+//インプットユーザーでは（２２）引数としてコールバック関数を受け取り。
+//プロントuserで名前の促しをする。
+//入力を受け取ったらコールバック関数を実行する。
+//引数には入力したnameを渡す。
+
+
+//はじめてのjavaScriptプログラム入門の４５を見ながらやる。　
+
+
+
+
+
+</script>
+
+</body>
+</html>
