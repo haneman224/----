@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="taskStatus">未完了</div>
+    <button id="toggleButton">切り替え</button>
+    <!-- <! --<button id="myButton">ボタンをクリック</button> -->
+<script>
+
+// let button = document.getElementById("myButton");
+// let heading = document.getElementById("myHeading");
+
+// button.addEventListener("click", function() {
+//   // ボタンがクリックされたときの処理
+//   heading.textContent = "ボタンがクリックされました";
+// });
+
+let taskStatusElement = document.getElementById("taskStatus");
+let toggleButton = document.getElementById("toggleButton");
+
+toggleButton.addEventListener("click", function() {
+  let currentStatus = taskStatusElement.textContent;
+
+  if (currentStatus === "未完了") {
+    taskStatusElement.textContent = "完了";
+  } else {
+    taskStatusElement.textContent = "未完了";
+  }
+});
+
+</script>
+</body>
+</html>
